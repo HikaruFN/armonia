@@ -1,0 +1,54 @@
+.chat-container{
+    margin-top: 60px;
+    
+}
+.chat-container h1{
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+.chat-container #chat-box{
+    padding: 20px;
+    min-height: 300px;
+    border: 2px solid #B6BDC1;
+}
+#aldo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+#aldo img{
+    border-radius: 50%;
+    width: 80px;
+    margin-right: 25px;
+}
+.aldo-info span{
+    color: #CCCCCC;
+}
+#messaggi .messaggio{
+    padding: 10px;
+}
+#messaggi .risposta-aldo{
+    background-color: #E6F7FF;
+}
+#richiesta-container{
+    padding: 25px;
+    background-color: #CCCCCC;
+    border: none;
+}
+::placeholder{
+    color: #CCCCCC;
+}
+#richiesta-container input{
+    border: none;
+    width: 400px;
+    padding: 15px;
+    outline: none;
+    
+}
+#richiesta-container button{
+    background-color: #E6F7FF;
+    border: none;
+    font-family: 'Source Code Pro', monospace;
+    padding: 15px;
+}
