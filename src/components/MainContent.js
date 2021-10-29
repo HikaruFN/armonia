@@ -4,8 +4,8 @@ import Chat from './Chat';
 function MainContent(){
     return(
         <div className="main-content-container">
-            <ModuloDiContatto></ModuloDiContatto>  
-            <Chat></Chat>  
+            <ModuloDiContatto/>
+            <Chat/> 
         </div>
     );
 }

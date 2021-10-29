@@ -1,30 +1,15 @@
 import './ModuloDiContatto.css';
+import React from 'react';
+import { useForm } from "react-hook-form"; 
 function ModuloDiContatto(){
-    function validaForm(){
-        let telefono = document.getElementById('input-telefono');
-        let email = document.getElementById('input-email');
-        let hiddenAlertTelefono = document.getElementById('errore-telefono');
-        let hiddenAlertEmail = document.getElementById('errore-email');
-        if(telefono.value < 10 || isNaN(telefono.value)){
-            telefono.style.borderColor="red"; 
-            hiddenAlertTelefono.style.display='inline'
-            return false;
-        }else if(!email.value.includes('@')){
-            email.style.borderColor="red";
-            hiddenAlertEmail.style.display='inline'
-            return false;
-        }else{
-            telefono.style.borderColor="#CCCCCC";
-            hiddenAlertTelefono.style.display='null'
-            email.style.borderColor="#CCCCCC";
-            hiddenAlertEmail.style.display='null'
-            document.getElementById('submit').type = "submit";        
-        }
+    const {register, handleSubmit, formState: {errors}} = useForm();
+    const onSubmit = (data) =>{
+        console.log(data);
     }
     return(
-        <div className="modulo-container">
+        <div className="module-container">
             <h1># Modulo di contatto</h1>
-            <form className="modulo-form" >
+            <form className="module-form" onSubmit={handleSubmit(onSubmit)} >
                 <p>Ciao!
                     <br></br> 
                     <br></br>  
@@ -34,18 +19,18 @@ function ModuloDiContatto(){
                     <br></br>
                     <textarea cols="70" rows="2" placeholder="Introduzione personale"></textarea> 
                     <br></br>
-                    Il mio numero è <input id="input-telefono" type="text" placeholder="Contatto telefonico"></input>
-                    <span id='errore-telefono'>Numero non valido!</span>
+                    Il mio numero è <input id="input-telefone"  type="text" placeholder="Contatto telefonico" {...register("telefone", {required: true, minLength: 10,})}/>
+                    {errors.telefone && <span id='errore-telefono'>Numero non valido!</span>}
                     <br></br>
-                    O potete contattarmi sull'indirizzo email <input type="email" name="email" id="input-email" placeholder="Contatto email"></input>
-                    <span id='errore-email'>Email non valida!</span>
+                    O potete contattarmi sull'indirizzo email <input type="email" name="email" id="input-email" placeholder="Contatto email" {...register("email", {required: true, })}/>
+                    {errors.email && <span id='errore-email'>Email non valida!</span>}
                     <br></br>
                     <textarea cols="70" rows="2" placeholder="Domande e dettagli"></textarea>
                     <br></br>
-                    Grazie. 
+                    Grazie.: 
                 </p>
-                <button onClick={validaForm} id="submit" className="invia-messaggio" type="button">INVIA MESSAGGIO &gt; </button>
-            </form>
+                <input id="submit" className="send-message" type="submit" value="INVIA MESSAGGIO >" />
+            </form> 
         </div>
     );
 }

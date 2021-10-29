@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <div className="App-body">
-        <Sidebar></Sidebar>
-        <MainContent></MainContent>
+        <Sidebar/>
+        <MainContent/>
       </div>
     </div>
   );

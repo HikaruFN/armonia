@@ -1,17 +1,17 @@
-.modulo-container h1{
+.module-container h1{
     color: white;
     -webkit-text-stroke: 1px black;
 }
-.modulo-container .modulo-form p{
+.module-container .module-form p{
    color: #CCCCCC;
    line-height: 30px;/**/
 }
-.modulo-container .modulo-form input{
+.module-container .module-form input{
     border: 0;
     border-bottom:1px dotted #CCCCCC ;
     outline: none;
 }
-.modulo-container .modulo-form textarea{
+.module-container .module-form textarea{
     border: none;
     resize: none;
     outline: none;
@@ -27,7 +27,7 @@
     color: #ACACAC;
     font-family: 'Source Code Pro', monospace;
 }
-.modulo-container .modulo-form .invia-messaggio{
+.module-container .module-form .send-message{
     border: 0;
     padding: 10px 20px;
     background-color: #EAEAEA;
@@ -36,7 +36,7 @@
     font-family: 'Source Code Pro', monospace;
 }
 #errore-telefono{
-    display: none;
+  
     color: red;
     position: relative;
     font-size: 10px;
@@ -44,7 +44,7 @@
     right: 170px;
 }
 #errore-email{
-    display: none;
+    
     color: red;
     position: relative;
     font-size: 10px;

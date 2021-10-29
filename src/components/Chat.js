@@ -8,7 +8,8 @@ function Chat(){
     });
     function handleValue(e){
         setState({
-            ...state, message: e.target.value
+            ...state,
+            message: e.target.value
         })
     };
     function sendMessage(){
