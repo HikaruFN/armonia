@@ -5,6 +5,7 @@ function ModuloDiContatto(){
     const {register, handleSubmit, formState: {errors}} = useForm();
     const onSubmit = (data) =>{
         console.log(data);
+        alert('Inviato con successo!');
     }
     return(
         <div className="module-container">
@@ -19,10 +20,10 @@ function ModuloDiContatto(){
                     <br></br>
                     <textarea cols="70" rows="2" placeholder="Introduzione personale"></textarea> 
                     <br></br>
-                    Il mio numero è <input id="input-telefone"  type="text" placeholder="Contatto telefonico" {...register("telefone", {required: true, minLength: 10,})}/>
+                    Il mio numero è <input id="input-telefone"  type="text" placeholder="Contatto telefonico" {...register("telefone", {required: true, minLength: 10})}/>
                     {errors.telefone && <span id='errore-telefono'>Numero non valido!</span>}
                     <br></br>
-                    O potete contattarmi sull'indirizzo email <input type="email" name="email" id="input-email" placeholder="Contatto email" {...register("email", {required: true, })}/>
+                    O potete contattarmi sull'indirizzo email <input type="email" name="email" id="input-email" placeholder="Contatto email" {...register("email", {required: true})}/>
                     {errors.email && <span id='errore-email'>Email non valida!</span>}
                     <br></br>
                     <textarea cols="70" rows="2" placeholder="Domande e dettagli"></textarea>

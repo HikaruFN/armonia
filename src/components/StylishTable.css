@@ -1,0 +1,24 @@
+.stylish-table-container{
+    margin-top: 60px;
+}
+.stylish-table-header{
+    display: flex;
+}
+.stylish-table-header button{
+    padding: 10px 20px;
+    border: 0;
+    margin-left: 20px;
+}
+.stylish-table-header h1{
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+.table-data{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #AEBED8;
+    color: white;
+    height: 60px;
+}
