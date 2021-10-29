@@ -22,3 +22,20 @@
     color: white;
     height: 60px;
 }
+.card{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    height: 60px;
+}
+.card img{
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+}
+.card a{
+   color: black;
+   cursor: pointer;
+}
