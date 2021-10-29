@@ -1,12 +1,25 @@
 import './Chat.css';
 import Aldo from './Aldo_Baglio.jpg';
-import React from 'react';
-let messaggi = document.querySelector('massaggi');
-let span = React.createElement('div');
-function inviaMessaggio(){
-  messaggi.appendChild(span);
-}
+import React, {useState}  from 'react';
 function Chat(){
+    const [state, setState] = useState({
+        message: '',
+        arrMessages: []
+    });
+    function handleValue(e){
+        setState({
+            ...state, message: e.target.value
+        })
+    };
+    function sendMessage(){
+        let mex = state.message;
+        let array = state.arrMessages;
+        array.push(mex);
+        setState({
+            arrMessages: array,
+            message: ''
+        })
+    };
     return(
         <div className="chat-container">
             <h1># Chat</h1>
@@ -20,12 +33,21 @@ function Chat(){
                 </div>
                 <div id="messaggi">
                     <span className="risposta-aldo messaggio">Ciao, come posso aiutarti?</span>
+                    {
+                        state.arrMessages.map((item, index)=>{
+                            return (
+                                <div key={index}>
+                                    {item} 
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
             <div id="richiesta-container">
                 <div>
-                    <input type='text' placeholder="Scrivi un messagio..."></input>
-                    <button onClick={inviaMessaggio}>Invia messaggio &gt;</button>
+                    <input onChange={handleValue}  type='text' placeholder="Scrivi un messagio..." value={state.message}/>
+                    <button onClick={sendMessage}>Invia messaggio &gt;</button>
                 </div>
             </div>
         </div>
