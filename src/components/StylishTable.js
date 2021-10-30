@@ -31,7 +31,6 @@ function StylishTable(){
                         users.responseArr.map((item, index)=>{
                             return(
                                 <div key={index} className='card'>
-                                    <span>{index}</span>
                                     <div>
                                         <img src={item.img}/>
                                         <span>{item.name}</span>
@@ -44,9 +43,7 @@ function StylishTable(){
                         })
                     }
                 </div>
-
-            </div>
-            
+            </div>      
         </div>
     );
 }

@@ -28,10 +28,10 @@
 #messaggi .messaggio{
     padding: 10px;
 }
-#messaggi .risposta-aldo{
+#messaggi .response-aldo{
     background-color: #E6F7FF;
 }
-#richiesta-container{
+#request-container{
     padding: 25px;
     background-color: #CCCCCC;
     border: none;
@@ -39,16 +39,26 @@
 ::placeholder{
     color: #CCCCCC;
 }
-#richiesta-container input{
+#request-container input{
     border: none;
     width: 400px;
     padding: 15px;
     outline: none;
     
 }
-#richiesta-container button{
+#request-container button{
     background-color: #E6F7FF;
     border: none;
     font-family: 'Source Code Pro', monospace;
     padding: 15px;
+}
+#messages{
+    display: flex;
+    flex-direction: column;
+}
+.user-question{
+    margin: 10px 0;
+    text-align: right;
+    padding: 10px;
+    background-color: #CCCCCC;
 }

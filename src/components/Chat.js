@@ -1,10 +1,11 @@
 import './Chat.css';
 import Aldo from './Aldo_Baglio.jpg';
 import React, {useState}  from 'react';
+import { useEffect } from 'react/cjs/react.development';
 function Chat(){
     const [state, setState] = useState({
         message: '',
-        arrMessages: []
+        arrMessages: [],
     });
     function handleValue(e){
         setState({
@@ -17,10 +18,21 @@ function Chat(){
         let array = state.arrMessages;
         array.push(mex);
         setState({
+            ...state,
             arrMessages: array,
             message: ''
-        })
+        });
+        setTimeout(() => {
+            array.push('Miiinchia')
+            setState({
+                ...state,
+                aldoResponses : array,
+                message: ''
+            })
+            console.log(state.aldoResponses);
+        }, 2000);
     };
+   
     return(
         <div className="chat-container">
             <h1># Chat</h1>
@@ -32,20 +44,20 @@ function Chat(){
                         <span>Ultimo accesso: 3 ore fa</span>
                     </div>  
                 </div>
-                <div id="messaggi">
-                    <span className="risposta-aldo messaggio">Ciao, come posso aiutarti?</span>
+                <div id="messages">
+                    <span className="response-aldo messagge">Ciao, come posso aiutarti?</span>
                     {
                         state.arrMessages.map((item, index)=>{
                             return (
-                                <div key={index}>
+                                <span className='user-question' key={index}>
                                     {item} 
-                                </div>
+                                </span>
                             )
                         })
                     }
                 </div>
             </div>
-            <div id="richiesta-container">
+            <div id="request-container">
                 <div>
                     <input onChange={handleValue}  type='text' placeholder="Scrivi un messagio..." value={state.message}/>
                     <button onClick={sendMessage}>Invia messaggio &gt;</button>
