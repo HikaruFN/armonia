@@ -1,5 +1,5 @@
 import './StylishTable.css';
-import React , {useState, useEffect} from 'react';
+import React , {useState} from 'react';
 import axios from 'axios';
 function StylishTable(){
     const [users, setUsers] = useState({
@@ -13,6 +13,16 @@ function StylishTable(){
             })
         });
     };
+    function handleDelete(index){
+        let updatedResponseArr = [];
+        for(let i = 0; i <= users.responseArr.length; i++)
+        if(i !== index){
+            updatedResponseArr.push(users.responseArr[i]);
+        }
+        setUsers({
+            responseArr : updatedResponseArr
+        })
+    }
     return(
         <div className='stylish-table-container'>
             <div className='stylish-table-header'>
@@ -32,12 +42,12 @@ function StylishTable(){
                             return(
                                 <div key={index} className='card'>
                                     <div>
-                                        <img src={item.img}/>
+                                        <img src={item.img} alt={item.name}/>
                                         <span>{item.name}</span>
                                     </div>
                                     <span>{item.eta}</span>
                                     <span>{item.job}</span>
-                                    <a>Cancella</a>
+                                    <a onClick={()=>handleDelete(index)}>Cancella</a>
                                 </div>
                             )
                         })

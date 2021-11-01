@@ -1,7 +1,6 @@
 import './Chat.css';
 import Aldo from './Aldo_Baglio.jpg';
 import React, {useState}  from 'react';
-import { useEffect } from 'react/cjs/react.development';
 function Chat(){
     const [messages, setMessages] = useState({
         message: '',
@@ -20,7 +19,6 @@ function Chat(){
             who : 'user-question',
             message : mex
         });
-        console.log(messages.arrMessages);
         setMessages({
             ...messages,
             arrMessages: array,
@@ -45,7 +43,7 @@ function Chat(){
             <h1># Chat</h1>
             <div className="chat-box">
                 <div className='aldo'>
-                    <img src={Aldo}/>
+                    <img src={Aldo} alt="aldo-img"/>
                     <div className="aldo-info">
                         <h2>Aldo Baglio</h2>
                         <span>Ultimo accesso: 3 ore fa</span>

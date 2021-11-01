@@ -23,7 +23,6 @@
     height: 60px;
 }
 .card{
-    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,4 +37,7 @@
 .card a{
    color: black;
    cursor: pointer;
+}
+.card-items{
+    display: flex;
 }

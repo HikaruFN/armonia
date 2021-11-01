@@ -6,13 +6,13 @@ function Sidebar(){
             <h2>Componenti</h2>
                 <ul>
                     <li>
-                        <a href="#">Modulo di contatto</a>
+                        <a href="http://localhost:3000/">Modulo di contatto</a>
                     </li>
                     <li>
-                        <a href="#">Chat</a>
+                        <a href="http://localhost:3000/">Chat</a>
                     </li>
                     <li>
-                        <a href="#">Stylish table</a>
+                        <a href="http://localhost:3000/">Stylish table</a>
                     </li>
                 </ul>
             </div>
