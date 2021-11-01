@@ -16,23 +16,30 @@ function Chat(){
     function sendMessage(){
         let mex = messages.message;
         let array = messages.arrMessages;
-        array.push(mex);
+        array.push({
+            who : 'user-question',
+            message : mex
+        });
+        console.log(messages.arrMessages);
         setMessages({
             ...messages,
             arrMessages: array,
             message: ''
         });
         setTimeout(() => {
-            array.push('Miiinchia')
+            array.push({
+                who: 'response-aldo messagge',
+                message: 'Miinchia!'
+            })
             setMessages({
                 ...messages,
-                aldoResponses : array,
-                message: ''
+                message: '',
+                arrMessages : array,
+                
             })
             console.log(messages.aldoResponses);
         }, 2000);
     };
-   
     return(
         <div className="chat-container">
             <h1># Chat</h1>
@@ -49,8 +56,8 @@ function Chat(){
                     {
                         messages.arrMessages.map((item, index)=>{
                             return (
-                                <span className='user-question' key={index}>
-                                    {item} 
+                                <span className={item.who} key={index}>
+                                    {item.message} 
                                 </span>
                             )
                         })
