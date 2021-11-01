@@ -1,43 +1,43 @@
-.stylish-table-container{
-    margin-top: 60px;
+.stylish-table-container {
+  margin-top: 60px;
 }
-.stylish-table-header{
-    display: flex;
+.stylish-table-header {
+  display: flex;
 }
-.stylish-table-header button{
-    padding: 10px 20px;
-    border: 0;
-    margin-left: 20px;
+.stylish-table-header button {
+  padding: 10px 20px;
+  border: 0;
+  margin-left: 20px;
 }
-.stylish-table-header h1{
-    color: white;
-    -webkit-text-stroke: 1px black;
+.stylish-table-header h1 {
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
-.table-data{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #AEBED8;
-    color: white;
-    height: 60px;
+.table-data {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #aebed8;
+  color: white;
+  height: 60px;
 }
-.card{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: black;
-    height: 60px;
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  height: 60px;
 }
-.card img{
-    width: 60px;
-    height: 40px;
-    border-radius: 50%;
+.card img {
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
 }
-.card a{
-   color: black;
-   cursor: pointer;
+.card a {
+  color: black;
+  cursor: pointer;
 }
-.card-items{
-    display: flex;
+.card-items {
+  display: flex;
 }

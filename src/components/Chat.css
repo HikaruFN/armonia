@@ -1,68 +1,66 @@
-.chat-container{
-    margin-top: 60px;
-    
+.chat-container {
+  margin-top: 60px;
 }
-.chat-container h1{
-    color: white;
-    -webkit-text-stroke: 1px black;
+.chat-container h1 {
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
-.chat-container .chat-box{
-    padding: 20px;
-    min-height: 300px;
-    border: 2px solid #B6BDC1;
+.chat-container .chat-box {
+  padding: 20px;
+  min-height: 300px;
+  border: 2px solid #b6bdc1;
 }
-.aldo{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: 40px;
+.aldo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
-.aldo img{
-    border-radius: 50%;
-    width: 80px;
-    margin-right: 25px;
+.aldo img {
+  border-radius: 50%;
+  width: 80px;
+  margin-right: 25px;
 }
-.aldo-info span{
-    color: #CCCCCC;
+.aldo-info span {
+  color: #cccccc;
 }
-.messages{
-    display: flex;
-    flex-direction: column;
+.messages {
+  display: flex;
+  flex-direction: column;
 }
-.messages .messagge{
-    padding: 10px;
+.messages .messagge {
+  padding: 10px;
 }
-.messages .response-aldo{
-    background-color: #E6F7FF;
-    border-radius: 5px;
-    align-self: flex-start;
+.messages .response-aldo {
+  background-color: #e6f7ff;
+  border-radius: 5px;
+  align-self: flex-start;
 }
-.request-container{
-    padding: 25px;
-    background-color: #CCCCCC;
-    border: none;
+.request-container {
+  padding: 25px;
+  background-color: #cccccc;
+  border: none;
 }
-::placeholder{
-    color: #CCCCCC;
+::placeholder {
+  color: #cccccc;
 }
-.request-container input{
-    border: none;
-    width: 400px;
-    padding: 15px;
-    outline: none;
-    
+.request-container input {
+  border: none;
+  width: 400px;
+  padding: 15px;
+  outline: none;
 }
-.request-container button{
-    background-color: #E6F7FF;
-    border: none;
-    font-family: 'Source Code Pro', monospace;
-    padding: 15px;
+.request-container button {
+  background-color: #e6f7ff;
+  border: none;
+  font-family: "Source Code Pro", monospace;
+  padding: 15px;
 }
 
-.user-question{
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #CCCCCC;
-    border-radius: 5px;
-    align-self: flex-end;
+.user-question {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #cccccc;
+  border-radius: 5px;
+  align-self: flex-end;
 }

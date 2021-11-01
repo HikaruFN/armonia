@@ -1,24 +1,24 @@
-.sidebar-container{
-    text-align: left;
-    color: white;
-    background-color: #90CCAC;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
+.sidebar-container {
+  text-align: left;
+  color: white;
+  background-color: #90ccac;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
 }
-.sidebar-header h2{
-    margin-bottom: 30px;
+.sidebar-header h2 {
+  margin-bottom: 30px;
 }
-.sidebar-header ul{
-    list-style: none;
-    padding: 0;
+.sidebar-header ul {
+  list-style: none;
+  padding: 0;
 }
-.sidebar-header ul li{
-    margin-bottom: 10px;   
+.sidebar-header ul li {
+  margin-bottom: 10px;
 }
-.sidebar-header ul li a{
-    color: white;
-    font-size: 15px;
+.sidebar-header ul li a {
+  color: white;
+  font-size: 15px;
 }

@@ -1,53 +1,54 @@
-.module-container h1{
-    color: white;
-    -webkit-text-stroke: 1px black;
+.module-container h1 {
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
-.module-container .module-form p{
-   color: #CCCCCC;
-   line-height: 30px;/**/
+.module-container .module-form p {
+  color: #cccccc;
+  line-height: 30px; /**/
 }
-.module-container .module-form input{
-    border: 0;
-    border-bottom:1px dotted #CCCCCC ;
-    outline: none;
+.module-container .module-form input {
+  border: 0;
+  border-bottom: 1px dotted #cccccc;
+  outline: none;
 }
-.module-container .module-form textarea{
-    border: none;
-    resize: none;
-    outline: none;
-    background-image:
-    linear-gradient(to right, white 10px, transparent 10px),
+.module-container .module-form textarea {
+  border: none;
+  resize: none;
+  outline: none;
+  background-image: linear-gradient(to right, white 10px, transparent 10px),
     linear-gradient(to left, white 10px, transparent 10px),
-    repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-    line-height: 31px;
-    
-    
+    repeating-linear-gradient(
+      white,
+      white 30px,
+      #ccc 30px,
+      #ccc 31px,
+      white 31px
+    );
+  line-height: 31px;
 }
-::placeholder{
-    color: #ACACAC;
-    font-family: 'Source Code Pro', monospace;
+::placeholder {
+  color: #acacac;
+  font-family: "Source Code Pro", monospace;
 }
-.module-container .module-form .send-message{
-    border: 0;
-    padding: 10px 20px;
-    background-color: #EAEAEA;
-    font-size: 15px;
-    color: #333333;
-    font-family: 'Source Code Pro', monospace;
+.module-container .module-form .send-message {
+  border: 0;
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  font-size: 15px;
+  color: #333333;
+  font-family: "Source Code Pro", monospace;
 }
-.telefone-error{
-  
-    color: red;
-    position: relative;
-    font-size: 10px;
-    bottom: 15px;
-    right: 170px;
+.telefone-error {
+  color: red;
+  position: relative;
+  font-size: 10px;
+  bottom: 15px;
+  right: 170px;
 }
-.email-error{
-    
-    color: red;
-    position: relative;
-    font-size: 10px;
-    bottom: 15px;
-    right: 170px;
+.email-error {
+  color: red;
+  position: relative;
+  font-size: 10px;
+  bottom: 15px;
+  right: 170px;
 }
