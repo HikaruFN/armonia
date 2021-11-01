@@ -52,13 +52,13 @@ function Chat(){
                     </div>  
                 </div>
                 <div className="messages">
-                    <span className="response-aldo messagge">Ciao, come posso aiutarti?</span>
+                    <div className="response-aldo messagge">Ciao, come posso aiutarti?</div>
                     {
                         messages.arrMessages.map((item, index)=>{
                             return (
-                                <span className={item.who} key={index}>
+                                <div className={item.who} key={index}>
                                     {item.message} 
-                                </span>
+                                </div>
                             )
                         })
                     }

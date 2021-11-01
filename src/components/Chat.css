@@ -25,11 +25,17 @@
 .aldo-info span{
     color: #CCCCCC;
 }
+.messages{
+    display: flex;
+    flex-direction: column;
+}
 .messages .messagge{
     padding: 10px;
 }
 .messages .response-aldo{
     background-color: #E6F7FF;
+    border-radius: 5px;
+    align-self: flex-start;
 }
 .request-container{
     padding: 25px;
@@ -52,13 +58,11 @@
     font-family: 'Source Code Pro', monospace;
     padding: 15px;
 }
-.messages{
-    display: flex;
-    flex-direction: column;
-}
+
 .user-question{
     margin: 10px 0;
-    text-align: right;
     padding: 10px;
     background-color: #CCCCCC;
+    border-radius: 5px;
+    align-self: flex-end;
 }
