@@ -1,7 +1,7 @@
-import './ModuloDiContatto.css';
+import './ContactModule.css';
 import React from 'react';
 import { useForm } from "react-hook-form"; 
-function ModuloDiContatto(){
+function ContactModule(){
     const {register, handleSubmit, formState: {errors}} = useForm();
     const onSubmit = (data) =>{
         console.log(data);
@@ -20,19 +20,19 @@ function ModuloDiContatto(){
                     <br></br>
                     <textarea cols="70" rows="2" placeholder="Introduzione personale"></textarea> 
                     <br></br>
-                    Il mio numero è <input id="input-telefone"  type="text" placeholder="Contatto telefonico" {...register("telefone", {required: true, minLength: 10})}/>
-                    {errors.telefone && <span id='errore-telefono'>Numero non valido!</span>}
+                    Il mio numero è <input className="input-telefone"  type="text" placeholder="Contatto telefonico" {...register("telefone", {required: true, minLength: 10})}/>
+                    {errors.telefone && <span className='telefone-error'>Numero non valido!</span>}
                     <br></br>
                     O potete contattarmi sull'indirizzo email <input type="email" name="email" id="input-email" placeholder="Contatto email" {...register("email", {required: true})}/>
-                    {errors.email && <span id='errore-email'>Email non valida!</span>}
+                    {errors.email && <span id='email-error'>Email non valida!</span>}
                     <br></br>
                     <textarea cols="70" rows="2" placeholder="Domande e dettagli"></textarea>
                     <br></br>
                     Grazie.: 
                 </p>
-                <input id="submit" className="send-message" type="submit" value="INVIA MESSAGGIO >" />
+                <input className="send-message" type="submit" value="INVIA MESSAGGIO >" />
             </form> 
         </div>
     );
 }
-export default ModuloDiContatto;
+export default ContactModule;

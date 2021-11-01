@@ -35,7 +35,7 @@
     color: #333333;
     font-family: 'Source Code Pro', monospace;
 }
-#errore-telefono{
+.telefone-error{
   
     color: red;
     position: relative;
@@ -43,7 +43,7 @@
     bottom: 15px;
     right: 170px;
 }
-#errore-email{
+.email-error{
     
     color: red;
     position: relative;

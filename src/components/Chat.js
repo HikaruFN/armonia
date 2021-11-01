@@ -3,51 +3,51 @@ import Aldo from './Aldo_Baglio.jpg';
 import React, {useState}  from 'react';
 import { useEffect } from 'react/cjs/react.development';
 function Chat(){
-    const [state, setState] = useState({
+    const [messages, setMessages] = useState({
         message: '',
         arrMessages: [],
     });
     function handleValue(e){
-        setState({
-            ...state,
+        setMessages({
+            ...messages,
             message: e.target.value
         })
     };
     function sendMessage(){
-        let mex = state.message;
-        let array = state.arrMessages;
+        let mex = messages.message;
+        let array = messages.arrMessages;
         array.push(mex);
-        setState({
-            ...state,
+        setMessages({
+            ...messages,
             arrMessages: array,
             message: ''
         });
         setTimeout(() => {
             array.push('Miiinchia')
-            setState({
-                ...state,
+            setMessages({
+                ...messages,
                 aldoResponses : array,
                 message: ''
             })
-            console.log(state.aldoResponses);
+            console.log(messages.aldoResponses);
         }, 2000);
     };
    
     return(
         <div className="chat-container">
             <h1># Chat</h1>
-            <div id="chat-box">
-                <div id='aldo'>
+            <div className="chat-box">
+                <div className='aldo'>
                     <img src={Aldo}/>
                     <div className="aldo-info">
                         <h2>Aldo Baglio</h2>
                         <span>Ultimo accesso: 3 ore fa</span>
                     </div>  
                 </div>
-                <div id="messages">
+                <div className="messages">
                     <span className="response-aldo messagge">Ciao, come posso aiutarti?</span>
                     {
-                        state.arrMessages.map((item, index)=>{
+                        messages.arrMessages.map((item, index)=>{
                             return (
                                 <span className='user-question' key={index}>
                                     {item} 
@@ -57,9 +57,9 @@ function Chat(){
                     }
                 </div>
             </div>
-            <div id="request-container">
+            <div className="request-container">
                 <div>
-                    <input onChange={handleValue}  type='text' placeholder="Scrivi un messagio..." value={state.message}/>
+                    <input onChange={handleValue}  type='text' placeholder="Scrivi un messagio..." value={messages.message}/>
                     <button onClick={sendMessage}>Invia messaggio &gt;</button>
                 </div>
             </div>

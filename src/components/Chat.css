@@ -6,18 +6,18 @@
     color: white;
     -webkit-text-stroke: 1px black;
 }
-.chat-container #chat-box{
+.chat-container .chat-box{
     padding: 20px;
     min-height: 300px;
     border: 2px solid #B6BDC1;
 }
-#aldo{
+.aldo{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin-bottom: 40px;
 }
-#aldo img{
+.aldo img{
     border-radius: 50%;
     width: 80px;
     margin-right: 25px;
@@ -25,13 +25,13 @@
 .aldo-info span{
     color: #CCCCCC;
 }
-#messaggi .messaggio{
+.messages .messagge{
     padding: 10px;
 }
-#messaggi .response-aldo{
+.messages .response-aldo{
     background-color: #E6F7FF;
 }
-#request-container{
+.request-container{
     padding: 25px;
     background-color: #CCCCCC;
     border: none;
@@ -39,20 +39,20 @@
 ::placeholder{
     color: #CCCCCC;
 }
-#request-container input{
+.request-container input{
     border: none;
     width: 400px;
     padding: 15px;
     outline: none;
     
 }
-#request-container button{
+.request-container button{
     background-color: #E6F7FF;
     border: none;
     font-family: 'Source Code Pro', monospace;
     padding: 15px;
 }
-#messages{
+.messages{
     display: flex;
     flex-direction: column;
 }
