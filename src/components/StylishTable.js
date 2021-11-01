@@ -1,21 +1,20 @@
 import "./StylishTable.css";
 import React, { useState } from "react";
 import axios from "axios";
+import { set } from "react-hook-form";
 function StylishTable() {
   const [users, setUsers] = useState({
     responseArr: [],
   });
-  function callData() {
-    axios
-      .get(
-        "https://ae5a5c88-dfd5-42e0-ab56-d2de610d754b.mock.pstmn.io//postman"
-      )
-      .then((response) => {
-        setUsers({
-          responseArr: response.data,
-        });
-      });
-  }
+  const callData = async () => {
+    const response = await axios.get(
+      "https://ae5a5c88-dfd5-42e0-ab56-d2de610d754b.mock.pstmn.io//postman"
+    );
+    const responseData = response.data;
+    setUsers({
+      responseArr: responseData,
+    });
+  };
   function handleDelete(index) {
     const updateArray = users.responseArr.filter((item, i) => i !== index);
     setUsers({
