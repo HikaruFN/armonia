@@ -15,9 +15,10 @@ function StylishTable(){
     };
     function handleDelete(index){
         let updatedResponseArr = [];
-        for(let i = 0; i <= users.responseArr.length; i++)
-        if(i !== index){
-            updatedResponseArr.push(users.responseArr[i]);
+        for(let i = 0; i < users.responseArr.length; i++){
+            if(i !== index){
+                updatedResponseArr.push(users.responseArr[i]);
+            }
         }
         setUsers({
             responseArr : updatedResponseArr
