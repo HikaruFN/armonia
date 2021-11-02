@@ -1,6 +1,7 @@
 .module-container h1 {
   color: white;
   -webkit-text-stroke: 1px black;
+  margin-bottom: 30px;
 }
 .module-container .module-form p {
   color: #cccccc;
