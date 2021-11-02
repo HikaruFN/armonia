@@ -18,7 +18,8 @@
 }
 .aldo img {
   border-radius: 50%;
-  width: 80px;
+  width: 90px;
+  height: 90px;
   margin-right: 25px;
 }
 .aldo-info span {
@@ -34,12 +35,31 @@
 .messages .response-aldo {
   background-color: #e6f7ff;
   border-radius: 5px;
+  min-width: 250px;
   align-self: flex-start;
+  position: relative;
+}
+.response-aldo::after{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #e6f7ff;
+  bottom: 89%;
+  right: 80%;
+  content: '';
+  transform: rotate(45deg);
 }
 .request-container {
   padding: 25px;
   background-color: #cccccc;
   border: none;
+}
+.request-details{
+  display: flex;
+  justify-content: space-between;
+}
+.request-details input{
+  flex-grow: 1;
 }
 ::placeholder {
   color: #cccccc;
@@ -63,4 +83,17 @@
   background-color: #cccccc;
   border-radius: 5px;
   align-self: flex-end;
+  text-align: right;
+  min-width: 250px;
+  position: relative;
+}
+.user-question::after{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #cccccc;
+  bottom: 89%;
+  left: 85%;
+  content: '';
+  transform: rotate(45deg);
 }

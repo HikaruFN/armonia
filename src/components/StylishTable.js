@@ -34,21 +34,24 @@ function StylishTable() {
           <span>Posizione</span>
           <span>Azioni</span>
         </div>
-        <div className="table-cards">
-          {users.responseArr.map((item, index) => {
-            return (
-              <div key={index} className="card">
-                <div>
-                  <img src={item.img} alt={item.name} />
-                  <span>{item.name}</span>
-                </div>
-                <span>{item.eta}</span>
-                <span>{item.job}</span>
-                <a onClick={() => handleDelete(index)}>Cancella</a>
+        {users.responseArr.length == [] && (
+          <div className="empty-table">
+            <span>Nessun dato </span>
+          </div>
+        )}
+        {users.responseArr.map((item, index) => {
+          return (
+            <div key={index} className="card">
+              <div>
+                <img src={item.img} alt={item.name} />
+                <span>{item.name}</span>
               </div>
-            );
-          })}
-        </div>
+              <span>{item.eta}</span>
+              <span>{item.job}</span>
+              <a onClick={() => handleDelete(index)}>Cancella</a>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

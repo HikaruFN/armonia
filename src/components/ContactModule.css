@@ -4,7 +4,8 @@
 }
 .module-container .module-form p {
   color: #cccccc;
-  line-height: 30px; /**/
+  line-height: 35px; /**/
+  font-size: 20px;
 }
 .module-container .module-form input {
   border: 0;

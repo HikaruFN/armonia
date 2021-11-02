@@ -1,3 +1,4 @@
 .main-content-container {
-  padding: 20px;
+  padding: 20px 80px;
+  flex-grow: 1;
 }

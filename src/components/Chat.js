@@ -62,7 +62,7 @@ function Chat() {
         </div>
       </div>
       <div className="request-container">
-        <div>
+        <div className="request-details">
           <input
             onChange={handleValue}
             type="text"

@@ -41,3 +41,10 @@
 .card-items {
   display: flex;
 }
+.empty-table{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #aebed8;
+  padding: 40px;
+}
