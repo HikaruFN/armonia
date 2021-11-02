@@ -26,7 +26,7 @@ function ContactModule() {
           <br></br>
           <br></br>
           Mi Chiamo <input type="text" placeholder="Nome e Cognome"></input>e al
-          momento <input type="text" placeholder="Occupazione"></input>
+          momento <input type="text" placeholder="Occupazione"></input>.
           <br></br>
           Mi farebbe piacere partecipare a Ninja Campus perchè
           <br></br>
@@ -34,7 +34,7 @@ function ContactModule() {
             cols="70"
             rows="2"
             placeholder="Introduzione personale"
-          ></textarea>
+          ></textarea>.
           <br></br>
           Il mio numero è{" "}
           <input
@@ -54,7 +54,7 @@ function ContactModule() {
             id="input-email"
             placeholder="Contatto email"
             {...register("email")}
-          />
+          />.
           {errors.email && (
             <span className="email-error">Email non valida!</span>
           )}
@@ -63,7 +63,7 @@ function ContactModule() {
             cols="70"
             rows="2"
             placeholder="Domande e dettagli"
-          ></textarea>
+          ></textarea>.
           <br></br>
           Grazie.
         </p>
