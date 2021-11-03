@@ -1,4 +1,5 @@
 import "./Sidebar.css";
+
 function Sidebar() {
   return (
     <div className="sidebar-container">
@@ -26,7 +27,7 @@ function Sidebar() {
         <h5>&lt;/&gt; by Pasquale</h5>
       </div>
       {/*END CREDITS*/}
-      
+
     </div>
   );
 }

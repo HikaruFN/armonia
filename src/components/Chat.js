@@ -1,6 +1,7 @@
 import "./Chat.css";
 import Aldo from "./Aldo_Baglio.jpg";
 import React, { useState } from "react";
+
 function Chat() {
   const [messages, setMessages] = useState({
     message: "",
