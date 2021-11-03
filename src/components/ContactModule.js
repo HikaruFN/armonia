@@ -43,7 +43,7 @@ function ContactModule() {
             cols="70"
             rows="2"
             placeholder="Introduzione personale"
-            {...register('description')}
+            {...register("description")}
           ></textarea>
           .<br></br>
           Il mio numero è{" "}
