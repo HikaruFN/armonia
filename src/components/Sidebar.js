@@ -20,9 +20,13 @@ function Sidebar() {
         {/*END LINKS*/}
 
       </div>
+
+      {/*CREDITS*/}
       <div className="sidebar-footer">
         <h5>&lt;/&gt; by Pasquale</h5>
       </div>
+      {/*END CREDITS*/}
+      
     </div>
   );
 }
