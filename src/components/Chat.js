@@ -13,11 +13,11 @@ function Chat() {
     });
   }
   function sendMessage() {
-    let mex = messages.message;
-    let array = messages.arrMessages;
+    const {message} = messages;
+    const array = messages.arrMessages;
     array.push({
       who: "user-question",
-      message: mex,
+      message,
     });
     setMessages({
       ...messages,
