@@ -5,6 +5,8 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  height: 500px;
+  position: fixed;
   justify-content: space-between;
   align-items: left;
 }
