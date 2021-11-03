@@ -1,4 +1,4 @@
-import "./StylishTable.css";
+import "./stylish_table.css";
 import React, { useState } from "react";
 import axios from "axios";
 import { set } from "react-hook-form";

@@ -1,7 +1,7 @@
 //questo componente sarà il wrapper dell'intera pagina
 import './App.css';
-import MainContent from './components/MainContent';
-import Sidebar from './components/Sidebar';
+import MainContent from './components/main_content';
+import Sidebar from './components/sidebar';
 function App() {
   return (
     <div className="App">

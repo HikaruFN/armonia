@@ -1,5 +1,5 @@
-import "./Chat.css";
-import Aldo from "./Aldo_Baglio.jpg";
+import "./chat.css";
+import Aldo from "./aldo_baglio.jpg";
 import React, { useState } from "react";
 
 function Chat() {
