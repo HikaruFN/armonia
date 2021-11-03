@@ -37,6 +37,7 @@ function Chat() {
       console.log(messages.aldoResponses);
     }, 2000);
   }
+  
   return (
     <div className="chat-container">
       <h1># Chat</h1>

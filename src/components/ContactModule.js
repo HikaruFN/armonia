@@ -1,10 +1,7 @@
 import "./ContactModule.css";
 import React from "react";
-{/*Import useForm*/}
 import { useForm } from "react-hook-form";
-{/*Import yupResolver*/}
 import { yupResolver } from "@hookform/resolvers/yup";
-{/*Import all from yup*/}
 import * as yup from "yup";
 
 /* Schema rules for required camps*/
