@@ -1,4 +1,4 @@
-import "./contact_module.css";
+import "./contact-module.css";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";

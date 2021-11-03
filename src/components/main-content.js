@@ -1,7 +1,7 @@
-import "./main_content.css";
+import "./main-content.css";
 import Chat from "./chat";
-import StylishTabe from "./stylish_table";
-import ContactModule from "./contact_module";
+import StylishTabe from "./stylish-table";
+import ContactModule from "./contact-module";
 
 function MainContent() {
   return (
