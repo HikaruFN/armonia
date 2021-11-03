@@ -6,14 +6,18 @@ function Chat() {
     message: "",
     arrMessages: [],
   });
+
+  /*Tracks message input value*/
   function handleValue(e) {
     setMessages({
       ...messages,
       message: e.target.value,
     });
   }
+
+  /*Triggers once message is sent*/
   function sendMessage() {
-    const {message} = messages;
+    const { message } = messages;
     const array = messages.arrMessages;
     array.push({
       who: "user-question",
@@ -24,6 +28,7 @@ function Chat() {
       arrMessages: array,
       message: "",
     });
+    /*After 2 secs adds message from Aldo with 'Miinchia!'*/
     setTimeout(() => {
       array.push({
         who: "response-aldo messagge",
@@ -34,14 +39,16 @@ function Chat() {
         message: "",
         arrMessages: array,
       });
-      console.log(messages.aldoResponses);
     }, 2000);
   }
-  
+
   return (
     <div className="chat-container">
       <h1># Chat</h1>
+
+      {/*CHAT BOX*/}
       <div className="chat-box">
+        {/*Aldo infos*/}
         <div className="aldo">
           <img src={Aldo} alt="aldo-img" />
           <div className="aldo-info">
@@ -49,10 +56,14 @@ function Chat() {
             <span>Ultimo accesso: 3 ore fa</span>
           </div>
         </div>
+
         <div className="messages">
+          {/*Aldos default message*/}
           <div className="response-aldo messagge">
             Ciao, come posso aiutarti?
           </div>
+
+          {/*Displays all messages in state arrMessages*/}
           {messages.arrMessages.map((item, index) => {
             return (
               <div className={item.who} key={index}>
@@ -62,6 +73,8 @@ function Chat() {
           })}
         </div>
       </div>
+      {/*END CHAT BOX*/}
+
       <div className="request-container">
         <div className="request-details">
           <input
