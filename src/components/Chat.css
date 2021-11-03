@@ -51,8 +51,8 @@
   transform: rotate(45deg);
 }
 .request-container {
-  padding: 25px;
-  background-color: #cccccc;
+  padding: 15px;
+  background-color: #F5F6F8;
   border: none;
 }
 .request-details{
@@ -67,13 +67,14 @@
 }
 .request-container input {
   border: none;
-  width: 400px;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 2px 0 0 2px;
   outline: none;
 }
 .request-container button {
   background-color: #e6f7ff;
   border: none;
+  border-radius: 0 2px 2px 0;
   font-family: "Source Code Pro", monospace;
   padding: 15px;
 }
@@ -81,7 +82,7 @@
 .user-question {
   margin: 10px 0;
   padding: 10px;
-  background-color: #cccccc;
+  background-color: #F5F6F8;
   border-radius: 5px;
   align-self: flex-end;
   text-align: right;
@@ -92,7 +93,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #cccccc;
+  background-color: #F5F6F8;
   bottom: 89%;
   left: 85%;
   content: '';
