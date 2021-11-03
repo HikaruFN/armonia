@@ -54,3 +54,10 @@
   bottom: 15px;
   right: 170px;
 }
+.required-error{
+  color: red;
+  position: relative;
+  font-size: 10px;
+  bottom: 15px;
+  right: 170px;
+}

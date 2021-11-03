@@ -1,15 +1,25 @@
 import "./ContactModule.css";
 import React from "react";
+{/*Import useForm*/}
 import { useForm } from "react-hook-form";
+{/*Import yupResolver*/}
 import { yupResolver } from "@hookform/resolvers/yup";
+{/*Import all from yup*/}
 import * as yup from "yup";
+
+/* Schema rules for required camps*/
 const Schema = yup.object().shape({
   telefone: yup
     .number()
     .required()
-    .test((val) => val.toString().length == 10),
+    .test((val) => val.toString().length === 10),
   email: yup.string().email().required(),
+  fullname: yup.string().required(),
+  job: yup.string().required(),
+  /* Textareas are not required */
 });
+
+/*Triggers once form is sent*/
 function ContactModule() {
   const {
     register,
@@ -17,13 +27,15 @@ function ContactModule() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(Schema) });
   const onSubmit = (data) => {
-    console.log(data);
+    /*If successfully sent print alert*/
     alert("Inviato con successo!");
   };
+
   return (
     <div className="module-container">
       <h1># Modulo di contatto</h1>
       <form className="module-form" onSubmit={handleSubmit(onSubmit)}>
+        {/*FORM*/}
         <p>
           Ciao!
           <br></br>
@@ -32,10 +44,19 @@ function ContactModule() {
           <input
             type="text"
             placeholder="Nome e Cognome"
-            {...register("name")}
+            name="fullname"
+            {...register("fullname")}
           />
+          {/*It displays in case of error*/}
+          {errors.fullname && (
+            <span className="required-error">Campo richiesto</span>
+          )}
           e al momento{" "}
           <input type="text" placeholder="Occupazione" {...register("job")} />.
+          {/*It displays in case of error*/}
+          {errors.fullname && (
+            <span className="required-error">Campo richiesto</span>
+          )}
           <br></br>
           Mi farebbe piacere partecipare a Ninja Campus perchè
           <br></br>
@@ -54,6 +75,7 @@ function ContactModule() {
             placeholder="Contatto telefonico"
             {...register("telefone")}
           />
+          {/*It displays in case of error*/}
           {errors.telefone && (
             <span className="telefone-error">Numero non valido!</span>
           )}
@@ -65,7 +87,7 @@ function ContactModule() {
             placeholder="Contatto email"
             {...register("email")}
           />
-          .
+          .{/*It displays in case of error*/}
           {errors.email && (
             <span className="email-error">Email non valida!</span>
           )}
@@ -85,6 +107,7 @@ function ContactModule() {
           value="INVIA MESSAGGIO >"
         />
       </form>
+      {/*END FORM*/}
     </div>
   );
 }
