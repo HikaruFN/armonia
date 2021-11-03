@@ -4,6 +4,7 @@
 .chat-container h1 {
   color: white;
   -webkit-text-stroke: 1px black;
+  margin-bottom: 40px;
 }
 .chat-container .chat-box {
   padding: 20px;
